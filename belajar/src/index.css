@@ -77,6 +77,17 @@ span {
   cursor: pointer;
 }
 
+.btn-cancel{
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
 .form {
   position: fixed;
   justify-items: center;
