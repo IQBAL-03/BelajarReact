@@ -87,7 +87,8 @@ function App() {
               <option value="XI PPLG 3">XI PPLG 3</option>
             </select>
           </form>
-          <button className="btn-simpan">Simpan</button>
+          <button type="button" className="btn-cancel" onClick={()=> setShowEdit(false)}>Batal</button>
+          <button type="submit" className="btn-simpan">Simpan</button>
         </div>
       )}
 
