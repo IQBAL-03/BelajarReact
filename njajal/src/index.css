@@ -1,68 +1,113 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-color: rgba(200, 199, 199, 0.526);
+}
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.btn-tambah {
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background: linear-gradient(to right, blue, rgb(0, 238, 255));
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  justify-content: center;
+}
+
+.card-container {
+  background-color: white;
+  padding: 2rem 4rem;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card-container ::before {
+  content: "";
+  background: linear-gradient(
+    to right,
+    blue,
+    rgb(255, 255, 255),
+    rgb(0, 238, 255)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+
+span {
+  color: blue;
+}
+
+.btn-edit {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: orange;
+  color: white;
+}
+
+.btn-hapus {
+  margin-left: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+
+.btn-simpan {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: limegreen;
+  color: white;
+  margin-top: 20px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.btn-cancel{
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.form {
+  position: fixed;
+  justify-items: center;
+  text-align: center;
+  background-color: white;
+  padding: 40px;
+  border-radius: 24px;
+  z-index: 99999999999999999999999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form input,
+select {
+  padding: 15px;
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  gap: 5px;
 }

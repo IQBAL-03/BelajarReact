@@ -1,35 +1,57 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+//import { use, useState } from "react";
+import "./index.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [murid, setMurid] = useState([
+    { nama: "Rei", nisn: "00", kelas: "XI PPLG 2" },
+    { nama: "Iqbl", nisn: "22", kelas: "XI PPLG 2" },
+    { nama: "Ibm", nisn: "03", kelas: "XI PPLG 3" },
+  ]);
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+      <Header />
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      {murid.map((murid, idx) => (
+        <Biodata
+        key={idx}
+        nama={murid.nama}
+        nisn={murid.nisn}
+        kelas={murid.kelas}
+        />
+      ))}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+function Header() {
+  return (
+    <header>
+      <div className="header">
+        <h1>Data Siswa</h1>
+        <button className="btn-tambah">+ Tambah</button>
+      </div>
+    </header>
+  );
+}
+
+function Biodata(props) {
+  return (
+    <div className="card-container">
+      <h3>{props.nama}</h3>
+      <p>
+        <span>NISN: </span>
+        {props.nisn}
+      </p>
+      <p>
+        <span>Kelas</span>
+        {props.kelas}
+      </p>
+      <button className="btn-edit">Edit</button>
+      <button className="btn-hapus">Hapus</button>
+    </div>
+  );
+}
+
+export default App;
