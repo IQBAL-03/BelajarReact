@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./index.css";
+import "./App.css";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -33,7 +33,7 @@ function App() {
           />
         ))}
       </div>
-      
+
       <Footer />
 
        {showModal && (
