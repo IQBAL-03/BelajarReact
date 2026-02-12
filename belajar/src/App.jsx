@@ -42,7 +42,7 @@ function App() {
               type="text"
               name="nama"
               placeholder="Masukkan Nama Siswa....."
-              onChange={(x)=>({...form, nama:x.target.value})}
+              onChange={(x)=>setForm({...form, nama:x.target.value})}
               />
               {/*
               1. onChange={}
